@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+<body>
+
+
+<div class='header'>
+<a class=header_link id='books_link'>Books</a>
+<a class=header_link id='people_link'>People</a>
+<a class=header_link id='potluck_link'>Pot Luck</a>
+</div>
+
+<h1 class='list'> Books </h1>
+<!--list of books-->
+<ul>
+{% for book in books %}
+<li> <a href="#{{book.title}}"> {{book.title}} </a> </li>
+{% endfor %}
+</ul>
+
+{% for book in books %}
+
+<div class='book'>
+	<h2 class='title'><a id="{{book.title}}"> {{book.title}} </a> </h2>
+	<h3 class='author'><a id="{{book.author}}">{{book.author}} </a> </h3>
+	<img src={{book.image_path}} alt="{{book.title}}">
+	<p> {{book.host}}'s pick </p>
+	
+</div>
+
+{% endfor %}
+
+
