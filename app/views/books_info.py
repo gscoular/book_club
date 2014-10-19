@@ -1,4 +1,4 @@
-covers_path = '/img/covers/'
+covers_path = '/static/covers/'
 
 
 BOOKS ={'books': [
